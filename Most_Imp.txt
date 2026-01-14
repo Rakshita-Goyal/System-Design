@@ -1,0 +1,30 @@
+client server archiectecture
+dns (domain name sysytem)
+proxy and reverse proxy 
+latency :deploy service across multiple server
+http/https
+apis:request structure,format responses,different client interacts with server
+api-styles:ret,graphql
+database :sql nosql
+vertical and horizontal scaling/scaling out
+load balancer to decide which server to go to 
+load balancing algos:round robin ,least connections,ip hashing 
+indexing 
+replication: improves the read request even more ,copies across the servers 
+primary replica for write operations and multiple read replicas,[if primary fails, read replica takes its place ]improve availability
+sharding:improve the write operations also by diving the server into multiple servers using sharding key ,handle a portion of data, divide in rows level
+vertical partitioning :divide via columns ,quick data retrival,less disk io 
+caching :cache aside pattern 
+denormalization 
+cap theorem
+blob storage:large unsructured data ,images videos etc ,eg : amazon s3. in buckets but straming the video directly from the blob storage is slower
+cdn :fast distribution based on location: global netork of distributed networks to work together to deliver web content 
+websockets: two way communication channel between client and server (single persistent connection ). eliminates polling 
+webhooks:instead of countinous web polling :server sends http request to other servers as soon as event occurs
+receiver/app registers the webhook url with the provider ,when an event occurs provider sends the hhtp post request to webhook url with event details to receiver,save the unnessary api calls.
+monolithic and microservice
+in microservices direct api calls between services is not recommended so 
+message queues:asynchronous communication without blocking other operations ,rather than at the moment response 
+rate limiting the messages /requests by a client to server 
+api gateway to handle it: authentication ,rate limiting,logging montoring ,request routing 
+idempotency  
