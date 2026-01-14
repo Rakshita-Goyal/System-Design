@@ -1,0 +1,49 @@
+client server ,dns resolution 
+multiple clients ,load on the server ,make it fault tolerant 
+increase cpus and ram of the server (vertical scaling ),but not always same load,resources loss ,over optimization 
+that why cloud service is used ,cloud will increase resources based on needs
+but the vertical scaling can not happen when the server is in running state to it has to restart ,that is there is downtime ,if rush increases machines restarts
+for no downtime 
+horizontal scaling ,increase servers ,no downtime just gets slower for some time 
+but how to map the server ,beacuse the dns gives the same ip address of the primary server 
+so load balancer is user: in dns the ip of load balancer is stored 
+load balancer uses algos to distribute the load : like round robin 
+as server increases tell the load balancer that a server is added , it distributes one by one      ,first the server boots then tell the load balancer of its existence 
+can reduce the servers as well and load balancer will know how many are left
+called elastic load balancer
+in microservices: use of route routing/api gateway ie if api/auth then go to authorization service /oder for order service etc etc ,
+each service has laod balancer so route to load balancer
+so the dns gives the ip address of api gateway
+
+if now from payment gateway (after the payment happens send the email validating the payment) the request gos goes to  email worker and from there to email and response comes back 
+but this is synchronous ,payment server has to wait email is send ,not scalable ,as email can take time ,email worker depedent on gmail apis 
+so queue system is used ,as payment made push in in queue towrds the email worker ,email worker one by one take the emails and discard it ,also email worker servers can also be increased ,increase the 
+parrallelisim 
+email worker can also set the rate limiting ,saying 10 emails to pick in 1 sec 
+in cloud sqs simple queue system is used 
+in queue how will the email worker will pick up the event :
+push and pull mechanism 
+pull: email worker will pick it using polling ,ask if any message is present 
+push : queue invoke the email worker about the message present in it 
+sql uses pull : 
+short pooling :apis call increses,ask again gain if message present or not 
+long pooling : wait for 10 secs then ask 
+
+pub sub model:
+at an event we want to do multiple takes,like after payment i want to email,whattapp,notification etc 
+for that sns (simple notification system )is present conneted to the payment gateway,as the payment happens it triggers the sns and other email worker,whattsapp are connected to sns and other services access the sns
+sqs only one consumer ,sns multiple consumer/services:  
+called evevt diven artitecture 
+problem in this sns archietecture is : no acknoledgement 
+in the sqs(queue) archiectecture if any email fails then email worker put back to the queue or craete a dead queue and put in that .
+
+fan out archiectecture 
+since the sns does not have acknowledgement so imcorporate the queus for each consumer in it 
+sns is connected to the email queue,whattaspp etc queue and each queue to repective email workers and whattapp workers
+
+Rate limiting methods: leaky bucket, token buket 
+
+cdn::
+we access the cloud front (nearest clout front we are associated through anycast ) we check in the cache only in the front if present 
+other wise go to the load balancer and take the data and save in the cache also 
+
