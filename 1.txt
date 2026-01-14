@@ -1,0 +1,107 @@
+System Design = deciding how to build a large software system
+
+high level design      low level design 
+hld:overview of sysytem :  services,databases,cachingload balancers,message queues
+lld:classes,objects,methods,db schema,design patterns,design apis,models
+
+eg:
+functional :user signup login ,users can buy subscription,play pause video
+and non functional requirements : secure,scalable,low latency
+
+hld:
+serverless and serverful
+horizontal and vertical scaling 
+threads
+pages
+request response cycle
+dns
+
+Databases
+sql and no sql
+in-memory databases
+data replication and migration 
+data partitioning
+sharding 
+
+consistency and availability 
+data consistency and its levels
+isolation and its levels
+cap theorem 
+
+cache
+redis,memchached
+write policies:write bck write through and around
+replacement policies
+cnn content delivery networks
+
+networking :
+tcp/udp
+http(1/2/3) https
+web sockets
+webRTC and video streaming 
+
+load balancers
+load balancing algos(stateless and stateful)
+consistent hashing 
+proxy and reverse proxy
+rate limiting 
+
+message queues
+asynchronous processing (kafka ,rabbitmq)
+publisher-subscriber model
+
+monolithic and microservice
+why 
+single point of failure
+avoiding cascading failures
+containerization 
+migrating to microservices
+
+monitoring and logging 
+logging evevnts and monitoring metrics
+anamoly detection 
+
+security :
+token for auth
+sso oauth
+access control list rule engines
+encryption 
+
+system design tradeoffs:
+push and pull archietecture
+consitency and availability
+sql and nosql
+memory and latency 
+throughput and latency
+accuracy and latency
+
+egs:major apps like uber whattapp netflix 
+
+
+LLD
+
+oops:
+4 pillars
+solid principles
+
+design patterns:
+creational(singleton,factory etc)
+structural(proxy,bridge etc )
+behaviuoral(strategy,command,observer etc )
+
+concurrency and thread safety
+thread safe injection 
+locking mecjanism
+producer-consumer
+race condition synchronization 
+
+uml diagrams
+
+apis :
+api design 
+req/res object modelling
+versioning and extensibility
+clean code principles :dry,srp etc 
+avoiding god classes
+
+eg:tic tac ,plitwise,noification system ,food delivery etc 
