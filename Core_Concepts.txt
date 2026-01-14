@@ -105,3 +105,6 @@ clean code principles :dry,srp etc
 avoiding god classes
 
 eg:tic tac ,plitwise,noification system ,food delivery etc 
+
+
+
