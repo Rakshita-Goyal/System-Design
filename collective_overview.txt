@@ -80,3 +80,16 @@ all peers streams to the server,but the server wont combine it ,raw streams are 
 can decide if want to consume or not 
 like a tunnel to pass stream
 
+web sockets vs polling vs server sent events
+in simple client server after request-response the connection breaks
+in web socket there is continous connection , continous update can happen,client can send request/data as well, open -full duplex connection 
+hard to scale as it is statefull, horizontal scaling is problem 
+in multiple servers how they know about the update
+
+polling : only to pull info ,ask server again again iff there is any update 
+interval set for polling 
+we disturbe he server more time but still its good bacuse these reuests go to diffenet servers using load balancer , so not bombarding one server
+short and long polling 
+long polling ,server holds the client for long time so as much update in that duration ,near continous ,same problem 
+
+
