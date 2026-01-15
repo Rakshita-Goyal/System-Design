@@ -47,3 +47,36 @@ cdn::
 we access the cloud front (nearest clout front we are associated through anycast ) we check in the cache only in the front if present 
 other wise go to the load balancer and take the data and save in the cache also 
 
+in youtube auto scaling is not good ,beacuse it is bases on averges if 70%increase then 1 server grows ,but on youtube sudden spikes occurs
+also overhead to add server 
+
+thats why use of serverless occured:
+lambda service :give your code to the lambda server (that has ip adrees that is given to client )lambda for each request 
+no need to manage the cpu ram auto scaling 
+but cold start :first user start slow then further requests good
+cheap,fixed time(cant take more than 10 sec to send the request),if ddos many lambda,vendor lock in ,no configuration ,stateless(destry when served )
+
+vm (difficut to scale as double os its own and servers).  vm has os,pacages,code 
+so contanerization : lightweight vm ,remove the os (use of the host machine )
+one machine multiple vm can work 
+problem of container orchestration: process of automating the deployment,management,scaling applications
+google borg to manage this
+the updated and opensource to this is kubernetes
+
+redis in memory shared cache 
+
+
+multidimensional video call:webrtc sfu mcu
+webrtc: p2p (peer to peer) connection  : uses udp (no server)
+but no third user can enter
+so mesh p2p:all peers form p2p connection with each other
+but not scalable
+for multiple users :server required 
+all peers p2p with server (only 1 connection required)
+all provide its streams and give to server,erver mix it and bradcast to all(called mcu) multipoint control unit 
+expensive to combine streams ,little lag also ,consume lot of cpu 
+sfu:selective forwarding unit 
+all peers streams to the server,but the server wont combine it ,raw streams are broadcast to all the peers clarifying which peer stream is it 
+can decide if want to consume or not 
+like a tunnel to pass stream
+
