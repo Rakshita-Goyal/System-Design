@@ -1,0 +1,59 @@
+system design is process of designing the elements of system like 
+architecture,modules,components,
+different interfaces of those components and 
+the data that flows into the system 
+
+HLD:high level design 
+describes the main components developed for resulting product
+archietectural details,database design ,services,processes,relationships between modules and features 
+
+LLD:low level design 
+describes the design of each element in hld system 
+claases,interfaces,relationaship between claases,logic ,design schema,design pattern 
+
+Monolithic archietecture:all components and functionalities in single codebase,less complex,easy ,high productive 
+centralised system 
+feww network callls,easy to secure ,easy integration test,lantency low
+if error in a module,whole system destroyed
+if one module updated, whole deployed
+tightly coupled,difficult to chnge language ,single point of failure 
+
+Distributed system/ microservice :collection of indivisual systems connected via network that shares the resources ,communicates 
+seprate repos and deployed separately
+data loss can happen but replication is solution 
+scalable ,avoid bottleneck
+complex,load balancer requires,difficult to secure 
+
+Latency:request+response time(network delay)+computational delay
+monolithic:only computational delay (process to process calls only)
+distributed:more latency-: n/w +computational delay
+reduce by 
+cachching ,cdn ,upgrade h/w 
+
+Througput :
+volume of work flowing through a system 
+distributed:more throughput,more machines added
+causes of low throuhput: high latency,protocol overhead, congestion 
+improve by: cdn,caching ,distributed system ,load balancer,upgrade h/w
+
+Availability:
+distributed :more avalaible beacuse not all server down ,replicas also present 
+in monolithic also replicas of whole system (but single module fail others also fail)
+more fault tolerant then more availaible 
+improve by: replication ,distributed system ,redundancy(in microservice),replication (in databases as the nodes are synchronized)
+
+Consistency:for all same requestes the clients should get same response 
+recent update committed to all systems , no dirty read 
+monolithic is always consisttent
+improve :improve metwork bandwidth,stop the read operation ,replication based on distance aware strategies(servers/replicas ko paas paas )
+types of consistencies:
+Strong consistency: system dos not allow read operation until all replicated nodes are updated 
+Eventual consistency: read requestes are not halted,some read old data but eventually all the datas updated to latest data 
+Weak consistency : not neccesary that all nodes are updated 
+
+CAP theorem:
+Consistency,Availability,Partition Tolerance 
+only 2 properties can be attained 
+CA:wait for update on all servers so unavalaible like bank
+AP:cant be consistent if always availaible if any update 
+CA:centralized monolithic(same get updated ) but if one fail no ther partition/replica availaible 

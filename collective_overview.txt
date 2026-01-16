@@ -92,4 +92,3 @@ we disturbe he server more time but still its good bacuse these reuests go to di
 short and long polling 
 long polling ,server holds the client for long time so as much update in that duration ,near continous ,same problem 
 
-
