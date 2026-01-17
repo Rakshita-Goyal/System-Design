@@ -1,0 +1,60 @@
+Lomport Logical clock 
+every event counnter++ and when receiving max+1 of previous and sender's
+
+Vertical scaling 
+increase the ram,cpu
+easy ,less power, easy management
+single point of failure,limited scope, best quality since 1 machine only,so price high
+Horizontal scaling 
+increase the servers 
+no single failunre,price less
+power more,secirity more required
+
+Redundancy:
+duplication of nodes or components so that when a node or component falis ,duplicate serves the customer
+Active redundancy: when each unit is operating/active and responding to action.Multiple nodes are connected to load balancer and each receive equal load
+Passive redundancy: when one node is active and other is not operating .during breakdown of active active node, the passive node maintain availability by becoming active 
+
+Replication :redundancy+synchronization
+Active replication: all the nodes are active and performing read and write 
+Passive replication:evry read write by the master,if master go down ,slave becomes the master 
+master-slave replication can be either synchronous or asynchronous, if the changes in master and slave same time then synchronous
+if changes are queued and written later then asynchronous
+
+Load Balancer:
+process of efficient distribution of network traffic across all nodes in a distributed system 
+roles of load balancer:
+load distribution is equal over every node 
+health check: if node is operational or not,request passed to another 
+high scalability,availability and throughput ,help resource utilisation,less response time ,allow high traffic ,prevent downtime 
+
+in monolithich horizontal scaling can happen by increasig the instaces of machine but 
+vertical scaling preferrred so load balancer not needed as such 
+
+single point of failure of load balancer : for that one passive load balancer also present 
+
+Load balancing algorithms:
+Round Robin. :rotation fashion 
+Weighted Round Robin(static):round robin but servers have different capacities,so some servers has more resorces ,some have more 
+IP Hash algorithm (static):almost same capacity ,has a hash function(in sorce ip),for random and unbiased server to request to 
+Source IP Hash(static):combines the server and client's source and destination ip address to produce hash key 
+Least Connection (dynamic):direct to server which has least active requests 
+Least Response Time (dynamic):directed to server with least response time 
+
+Caching :uses primary memory thats why fast ,onced pulled from the database,next tme from cache 
+types of cache :
+In memory/local:locally stored in server
+Distributed/external :all nodes sahres a cache , eg redis memchached
+cache :more for read extensive ,static 
+application server cache (database,apis etc)
+cdn from global to local 
+
+Cache Eviction Strategies: space is limited so needed to be deleted 
+ttl(time to live)
+Strategies :
+LRU(least recentally used)
+MRU(most recentally used)
+LFU(Least frequently used)
+LIFO(Last in first out)
+FIFO(first in first out)
+RR(round robin)
