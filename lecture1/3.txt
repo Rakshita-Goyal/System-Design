@@ -1,0 +1,35 @@
+file storage system is a dbms where data is stored in form of files 
+data redundancy:update,delete anamoly leading to data inconsisitency
+poor security
+slow: retrival difficult
+
+RDBMS:
+software that performs data operations on relational database like store ,manage ,query and retrieve
+data is stored in tables ,relation between two tables through foreign keys 
+advantages:no redundancy and inconsistency ,data concurrency(prevent abnormalities from occuring)
+better retrieval,data integrity(contraints)
+disadvantages:rigid schema,high cost,scaling issue(shrading/horizontal difficult) thats why scaling issue
+
+NOSQL:
+NON relational database
+key-value:for caching generally eg:redis
+document :combines dbms and nosql, relation concept from rdbms, dynamic schema and horizontal scaling from nosql databases eg:mongodb
+columnar :columns are stored together instead of rows, so that aggregation in such databases is rapid for data analysis eg:casandra
+graph: represents and stores entities and relationships in form of graph eg social networks google maps
+
+Normalization(breaking in tables and reduce redundancy) and Denormalization(merging of tables ):
+Denormalization advantages: better read ,management convienence ,high availability,reduce number of netwrok calls
+disadvantages:waste of memory,more complexity,data inconsistency ,slow write due to redundancy 
+
+polugot persistence:multiple dbs used
+in e-commerce application 
+shopping cart and session data->key values
+completed order:document store
+inventory and price:rdbms
+customer social graphs:graph store 
+
+Indexing :
+creates lookup table with a column and pointer to the memory location of the row containing this coloumn 
+o(logn) to search ,btrees used for indexing 
+for read intensive only 
+
