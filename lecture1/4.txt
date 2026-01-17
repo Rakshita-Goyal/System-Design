@@ -1,0 +1,31 @@
+Communication
+
+Sysnchronous communication(blocking call)
+request client wait for response     sequential way
+for consistency ,transaction , real time response
+
+Asynchronous communication (non blocking)
+computation takes a lot of time,scalability of application,avoid cascading failures (dont let server to overwhelm)
+
+Message based communication:
+client send in form of message ,resieves response in form of message
+it is async ,so client does not halt the process and wait for the process 
+producer:client
+consumer:server
+agent:channel between 
+P2P (email like) fifo queue me push asynchronous 
+Publish subscribe model(news email)
+tools:kafka rabbitmq
+
+web server : tools or programs that help keep the web application always up and running 
+can be h/w,s/w or both 
+HTTP servers
+
+Communication protocols
+protocols immplemented using hardware ,software and combination of both :
+push:server pushes new events to the client ,reduces the server load 
+pull/polling :client requests,server responds. but 100 requests but get response to just 5 requests
+long polling :client requets,server keep it open until it gives response ,server always busy,sequence can be disturbed
+socket:continous frequent channel,it is a 2-way connection link between two servers/nodes over the network 
+server sent events :one way, can push only when the site is open ,long lived connection 
+
