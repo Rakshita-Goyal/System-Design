@@ -1,0 +1,39 @@
+web server can act as client when requesting information 
+requirements for communication to happen :
+language independent , fast, light Weighted, enable communication over network ,
+this is rest.   a technique to provide these requirements
+representatinal state transfer
+rest api:uri+hhtp verb 
+
+SOA
+application into services,selective scaling , agile , lose coupling 
+high latency, complex security, cascaing failures (if a service fails its dependent also fail)
+can share databases
+
+Microservices
+services are imdependent, more scalable ,decouplng 
+
+Tier archiectecture:
+Logical sepration between diffenet components of application like frontend backend db 
+
+authentication(who are you) and authorization(what yu can do)
+
+simple authetication :
+client registers app gives the username and password to it also stored in db 
+everytime the client comes it gives username and password and app checks it from the db and gives response 
+
+token based:
+client registers get username password,then user sends the username and passsword server verifies it ans sends token ,now
+client can send token and get response in return savinf the db calls
+
+oauth :
+signup without password
+
+Proxy:
+a proxy server is a hardware or piece of software that is placed between the client and a application to provide 
+intermediary services in the communication 
+Proxy server:provides gateway between the user and internet
+types:
+forward proxy: hides the identity of client , so client request goes to proxy server and it hits the actual server and reponse also in same way
+reverse proxy:hides the server , makes user feel there is only one server ,provides load balancing for server ,filter somes requests,bswap backend servers without traffic diturbance
+
