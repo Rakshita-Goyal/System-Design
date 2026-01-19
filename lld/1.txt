@@ -1,0 +1,12 @@
+lld:application built around multiple dsa concepts
+dsa is algorithm
+lld is algo+ objects+ classes+ relationships+ data security+ notification+ payment gateway+ millions of users 
+lld focuses on :
+scalability (handle more users),
+maintainability (easy updates ,debuggable)
+reusability (plug and play, not tightly coupled )
+
+what is not lld:hld
+tech stack ,db type, servers scaling ,cost optimization ,system archietecture 
+
+if dsa is brain ,lld is skeleton 

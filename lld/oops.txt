@@ -1,0 +1,29 @@
+machine programming ->assembly lvel-> procedural programming ->oops (object oriented programming )
+oops:
+real world modelling 
+data security
+scable and resuable 
+
+Objects which interacts 
+object had characteristics and behaviour
+class is blueprint to make the objects 
+
+How objects communicate :
+
+class Car{
+    string brand;
+    void start();
+}
+class owner{
+    Car car ;
+    string name;
+    voidd drive(){
+        car.start();
+    }
+}
+
+Pillars of oops:
+Abstraction: hides the unneccasary details from the client and show only what is necassary
+Encapsulation: 
+Inheritance
+Polymorphism
