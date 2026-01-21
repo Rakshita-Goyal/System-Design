@@ -67,9 +67,9 @@ public class OPCfollowed{
         cart.addProduct(new Product("lenovo",1234));
         cart.addProduct(new Product("mac",2345));
         invoice.print();
-       saveToSql db=new saveToSql();
+       saveToDatabase db=new saveToSql();
        db.save(cart);
-       saveToFile db2=new saveToFile();
-       db.save(cart);
+       saveToDatabase db2=new saveToFile();
+       db2.save(cart);
     }
 }
