@@ -1,7 +1,7 @@
 //when called child it should have argument as same of broader argument is acceptable
 package lld;
 class Parent{
-public void print( Object msg){
+public void print(String msg){
     System.out.println("parent: "+msg);
 }
 }

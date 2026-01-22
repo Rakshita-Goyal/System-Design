@@ -10,3 +10,4 @@ what is not lld:hld
 tech stack ,db type, servers scaling ,cost optimization ,system archietecture 
 
 if dsa is brain ,lld is skeleton 
+

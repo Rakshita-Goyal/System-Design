@@ -24,6 +24,13 @@ class owner{
 
 Pillars of oops:
 Abstraction: hides the unneccasary details from the client and show only what is necassary
-Encapsulation: 
-Inheritance
-Polymorphism
+Encapsulation: combines characters and behaviours together in a capsule ,data security 
+access modifier:public private protected  (getter setter)
+Inheritance: extends from the parent to child 
+ class child:public parent ,means the parent class ke public ,protected are treated as them selves and private cant be 
+ class child:protected parent ,means public and protected will be considered as protected
+ class child:private parent ,means public ,protected of the parent are treated as private from that class 
+
+Polymorphism:dynamic(method overriding ) and static(method oveloading ,operator overloading)
+ 
+

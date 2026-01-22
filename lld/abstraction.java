@@ -16,9 +16,9 @@ class SportsCar implements Car{
     public SportsCar(String model,String brand){
         this.brand=brand;
         this.model=model;
-        currentGear=0;
-        currentSpeed=0;
-        isEngineOn=false;
+        this.currentGear=0;
+        this.currentSpeed=0;
+        this.isEngineOn=false;
     }
     @Override
     public void startEngine(){

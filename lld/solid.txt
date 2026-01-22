@@ -1,0 +1,29 @@
+write clean and easy to understand code to get consistent system 
+problems we face:mantainability,readability,debugging time  
+SOLID:
+single responsibility principle(SRP)
+open close principle(OCP)
+liskov substitution principle (LSP)
+interface segregtion principle(ISP)
+dependency injection principle(DIP)
+
+SRP:a class should have only one reason to change Or/ does only 1 thing 
+     for any updation ,less classes to change 
+
+OCP:     a class should be open for extension but closed for modification 
+
+LSP: subclasses should be sustituable for other base classes.If S is a subtype of T, then T should work correctly with S.
+      (dont change the clients request as it will tightly couple the client to claases, client should only interact with the interface )
+      (is breaks the ocp otherwise ) so just create a narrower parent class
+Three categories of LSP rules:
+Signature rules:(method argument rule)same or broader argument
+               (Return Type Rule:)same or narrower return type
+               (Exception rule):same or narrower
+Property Rules:Class invarient: means the basic logic shouldnot be broken by the child 
+               History contraints :should address and ahve the parent methods 
+Method Rules:Preconditions(the child class should include parent and can also include other values as well)
+             Postconditions(the child can have extra functions as well but has to have the parents and cant contradict the parents function )
+
+ISP:       
+
+DIP:

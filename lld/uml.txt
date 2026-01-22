@@ -1,0 +1,85 @@
+Inheritance :  (closed but uncloured arrow)
+ Association :simple line (open arrow)
+ Realization:closed uncloured arrow
+ Dependency:dotted open arrow
+ Aggregation :uncloured diamond 
+ Composition: coloured diamond 
+
+UML unified modelling language 
+standarized visual language to craete bluprints, diagrams,and models of software systems
+types of uml diagrams:
+Structural and behaviourial diagram 
+Structural: components that make up the systems and relationship between them (static modelling)
+behaviourial: represent what is interaction between the components of a systems and with other systems and what happens in the system 
+              (dynamic modelling )
+14 uml diagrams (7-7)
+for lld these two to be studied:
+Structural-Class diagram 
+Behaviourial -Sequence diagram 
+
+Class diagram : classes (attritubets,operations,relationships)in the application and how they are connected to each other 
+Car
++brand:String 
+#model:String
+-startEngine():void 
+-stopEngine():void
++ for public
+- for private
+# for protected 
+
+if abstract class write <<abstract>> above the box 
+
+Associations :dependency between the classes on each other 
+ Types:
+ Class associations and Object Associations
+ Class Associations: inheritance ,
+ Object Associations:simple association,Aggregation,Composition 
+ Inheritance : is a relationship -> (closed but uncloured arrow) supercar is a car (arrow from supercar to car)
+
+Composition: Has a ralationship
+simple association: arjun has a house (open arrow froom arjun to house )
+Aggregation:uncolured diamond room has a bed sofa chair ,(room is a container in which these exist)these also exist independently 
+Composition: coloured diamond ,chair has wheels arms seat (cant exist independently )
+
+to represent has a relationship 
+get a refernce of class Wheel wh in class chair and initize in the constructor
+so we will call ch->wh->method 
+
+Sequence diagram:interaction between objects and flow 
+class are represented just the block 
+lifeline :when the object starts in the application 
+activation bar :actually th object got active (can actually give and receive message from other object)
+message:two types:
+ synchronous: wait for response then you can send message
+   message as closed arrow and response as dotted arrow closed triangle coloured .message above line<<message>>
+ asynchronous: can continously send the messages
+   simple line with open arrow.<<message>>above 
+create message of a object (lifeline of object creadted)and destroy message->lifeline to the existing object ends 
+lost message :meassge send and lost ,denoted as circle with dot inside 
+found message :from unknown sorce(circle with a dot ) it comes to the object activation bas 
+
+firstly create flow then objects identify then squence diagram 
+alt represents if else in the diagram 
+option: if condition only
+loop: for iteration
+
+Structural diagrams :
+Class diagram :show static structure of system(for ood),claases,attributes,relationships
+Component diagram: how omponents combine to create larger components 
+Composite Structure diagram :represents the internal structure of the class and its interaction points with other parts of system 
+Deployment diagram: models the physical deployment of the componets,focus on real entities like servers and coputing resources 
+Object diagram:represents snapshot of a syatem at a particular point ,showing relationships between objects 
+Package diagram:heirarchial groupings of elements that allow for managable organization of various components of a system 
+Profile diagram:enables extension of a uml model by means of streotypes 
+
+Behaviourial daigrams:
+Activity diagram :shows squence of processes(workfloes)
+Communication diagram /collaboation diagram :focuses on objects and their relationships, showing sequenced meaasegs exchanged between objects 
+Sequence diagram :captures the ordered sequence of the messages sent between objects ,several objects interaction within single use case
+State Machine diagrams: descibes the behaviour of system in terms of states and transitions controlled by eternal inputs 
+Timing diagram: represents the behaviour of objects in given time frame and intercation during that time frame 
+Interaction overview :shows sequence of interaction diagrams and order they happen ,like activity but focus on interaction 
+
+
+
+
