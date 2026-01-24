@@ -24,6 +24,7 @@ Property Rules:Class invarient: means the basic logic shouldnot be broken by the
 Method Rules:Preconditions(the child class should include parent and can also include other values as well)
              Postconditions(the child can have extra functions as well but has to have the parents and cant contradict the parents function )
 
-ISP:       
+ISP:     Many client specific interfaces are better than one generic interface ,client shouldnt be forced to implement the methods is doesnt need
 
-DIP:
+DIP:     high level module should nt depend on low level module,rather both should depend on the abstraction 
+

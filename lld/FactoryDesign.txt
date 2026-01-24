@@ -1,0 +1,6 @@
+//seprate the creation  and application logic 
+//simple factory :factory class that decides which concrete class to instanciate
+//factory method: defines the interface for creating objects but allows subclass to decide which class to instanciate
+//abstarct method: provides an interface for creating families of related objects without specifying the concrete classes
+client ask the factory to bring the objects 
+basically hide the object creation from client 

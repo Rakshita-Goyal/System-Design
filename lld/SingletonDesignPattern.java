@@ -17,3 +17,12 @@ instance=new SingletonDesignPattern();
         System.out.println(obj1==obj2);
     }
 }
+
+//not thread safe beacuase if multithread program then two or more threads make different instances 
+//we want same instance and only 1 insatnce 
+
+//create a private constructor
+//crate static instance (getinstance )
+//return same instance evry time 
+
+//real world :logging system,database connection ,configuration manager
