@@ -47,7 +47,8 @@ public class DecoratorDesign {
     public static void main(String args[]){
 Character character=new Mario();
 character.getAbilities();
-character=new HeightUp(character);
+character=new HeightUp(character);//or 
+character=new HeightUp(new GunPower(character));//we can have the loop of the calling (like ecursion )
 System.out.println(character.getAbilities());
     }
 }
