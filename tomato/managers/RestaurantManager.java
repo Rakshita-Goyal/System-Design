@@ -1,6 +1,6 @@
 package tomato.managers;
 import java.util.ArrayList;
-import models.*;
+import tomato.models.*;
 import java.util.List;
 public class RestaurantManager{
   private List<Restaurant> restaurants = new ArrayList<>();

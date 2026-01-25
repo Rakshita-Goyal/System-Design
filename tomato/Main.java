@@ -1,6 +1,7 @@
 package tomato;
-import models.*;
-import strategies.*;
+import tomato.models.*;
+import tomato.strategies.*;
+import tomato.TomatoApp;
 public class Main {
     public static void main(String[] args) {
 

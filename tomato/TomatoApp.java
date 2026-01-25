@@ -1,17 +1,17 @@
 package tomato;
+
 import java.util.List;
-import models.*;
-import managers.*;
-import strategies.*;
-import factories.*;
-import services.NotificationService;
+import tomato.models.*;
+import tomato.managers.*;
+import tomato.strategies.*;
+import tomato.factories.*;
+import tomato.services.NotificationService;
 
 public class TomatoApp {
 
     public void initializeRestaurants() {
 
-
-Restaurant restaurant1 = new Restaurant("Bikaner", "Delhi");
+        Restaurant restaurant1 = new Restaurant("Bikaner", "Delhi");
         restaurant1.addMenuItem(new MenuItem("P1", "Chole Bhature", 120));
         restaurant1.addMenuItem(new MenuItem("P2", "Samosa", 15));
 
@@ -29,8 +29,10 @@ Restaurant restaurant1 = new Restaurant("Bikaner", "Delhi");
         restaurantManager.addRestaurant(restaurant1);
         restaurantManager.addRestaurant(restaurant2);
         restaurantManager.addRestaurant(restaurant3);
+    } // ✅ CLOSED initializeRestaurants
 
-public List<Restaurant> searchRestaurants(String location) {
+
+    public List<Restaurant> searchRestaurants(String location) {
         return RestaurantManager.getInstance().searchByLocation(location);
     }
 
@@ -39,8 +41,7 @@ public List<Restaurant> searchRestaurants(String location) {
         cart.setRestaurant(restaurant);
     }
 
-    
-public void addToCart(User user, String itemCode) {
+    public void addToCart(User user, String itemCode) {
         Restaurant restaurant = user.getCart().getRestaurant();
         if (restaurant == null) {
             System.out.println("Please select a restaurant first.");
@@ -53,7 +54,8 @@ public void addToCart(User user, String itemCode) {
             }
         }
     }
-  public void payForOrder(User user, Order order) {
+
+    public void payForOrder(User user, Order order) {
         boolean isPaymentSuccess = order.processPayment();
 
         if (isPaymentSuccess) {
@@ -61,7 +63,8 @@ public void addToCart(User user, String itemCode) {
             user.getCart().clear();
         }
     }
- public Order checkoutNow(User user, String orderType, PaymentStrategy paymentStrategy) {
+
+    public Order checkoutNow(User user, String orderType, PaymentStrategy paymentStrategy) {
         return checkout(user, orderType, paymentStrategy, new NowOrderFactory());
     }
 
@@ -77,12 +80,17 @@ public void addToCart(User user, String itemCode) {
         List<MenuItem> itemsOrdered = userCart.getItems();
         double totalCost = userCart.getTotalCost();
 
-        Order order = orderFactory.createOrder(user, userCart, orderedRestaurant, itemsOrdered, paymentStrategy, totalCost, orderType);
+        Order order = orderFactory.createOrder(
+                user, userCart, orderedRestaurant,
+                itemsOrdered, paymentStrategy,
+                totalCost, orderType
+        );
+
         OrderManager.getInstance().addOrder(order);
         return order;
     }
 
-   public void printUserCart(User user) {
+    public void printUserCart(User user) {
         System.out.println("Items in cart:");
         System.out.println("------------------------------------");
         for (MenuItem item : user.getCart().getItems()) {
@@ -90,8 +98,5 @@ public void addToCart(User user, String itemCode) {
         }
         System.out.println("------------------------------------");
         System.out.println("Grand total : ₹" + user.getCart().getTotalCost());
-    }
-
-
     }
 }

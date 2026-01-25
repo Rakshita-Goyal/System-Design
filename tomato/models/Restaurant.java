@@ -1,38 +1,32 @@
 package tomato.models;
-import java.util.List;
+
 import java.util.ArrayList;
-public class Restuarent{
- 
-private int restaurantId;
+import java.util.List;
+
+public class Restaurant {
+
     private String name;
     private String location;
-    private List<MenuItem>menu=new ArrayList<MenuItem>();
+    private List<MenuItem> menu = new ArrayList<>();
 
-public Restuarent(String name,String location){
-    this.location=location;
-    this.name=name;
-}
-
- public String getName() {
-        return name;
+    public Restaurant(String name, String location) {
+        this.name = name;
+        this.location = location;
     }
 
-    public void setName(String n) {
-        this.name = n;
+    public void addMenuItem(MenuItem item) {
+        menu.add(item);
+    }
+
+    public List<MenuItem> getMenu() {
+        return menu;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getLocation() {
         return location;
-    }
-
-    public void setLocation(String loc) {
-        this.location = loc;
-    }
- 
-    public void addMenuItem(MenuItem item){
-        menu.add(item);
-    }
-    public List<MenuItem>getMenu(){
-        return menu;
     }
 }

@@ -1,7 +1,7 @@
 package tomato.models;
 
 import java.util.List;
-import strategies.*;
+import tomato.strategies.*;
 
 public class PickupOrder extends Order {
 
@@ -24,5 +24,5 @@ public class PickupOrder extends Order {
         return restaurantAddress;
     }
 
-    
+
 }
