@@ -5,12 +5,17 @@
 //            Adapter
 //               ↑
 //           Adaptee (existing class)
+
+//adapter converts the interface of a class into a class into another interface that client excepts 
+//adapter lets the classes work together that couldnt because of incompatible interface 
+
 package lld;
 class VlcPlayer{
      public void playVlc(String fileName) {
         System.out.println("Playing VLC file: " + fileName);
     }
 }
+
 interface MediaPlayer{
     void play(String file);
 }

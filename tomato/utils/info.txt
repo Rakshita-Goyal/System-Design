@@ -1,0 +1,15 @@
+functional requirements :
+uses can search for restuarents based on location
+user add item to card
+user can checkout by making payments
+users to be notified for order placed 
+
+non functional requirements
+each part to be modifiable and scalable
+
+flow:
+users sees restuarents then see menu then add to cart the food items
+placemet of orders 
+order can be delivery order and pick up order 
+payment service 
+then notification 

@@ -13,6 +13,11 @@
 // Invoker → calls execute()
 // Command → calls Receiver
 // Receiver → does actual work
+
+//real life : any application with undo ,keyboard shortcut (like brigtness less or more )
+
+//defination :encapsulate the request object ,letting you parameterize clients with different request ,queue,log request and support unduable operations 
+
 package lld;
 interface Command {
     void execute();

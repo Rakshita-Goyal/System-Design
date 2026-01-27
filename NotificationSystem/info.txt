@@ -1,0 +1,4 @@
+play and plug model
+extendible :sms,emails.popup
+notification dynamically headers added and changed 
+store the notifications and logging also 

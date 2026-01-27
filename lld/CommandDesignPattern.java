@@ -1,4 +1,5 @@
 //for multiple buttons
+
 package lld;
 
 //what each button can do 
@@ -107,6 +108,7 @@ public class CommandDesignPattern {
         // remote.pressButton(1);  // ON
         // remote.pressButton(1);  // OFF
 
+//loop through the buttons 
 for(int i=0;i<2;i++){
     remote.pressButton(i);
     remote.pressButton(i);

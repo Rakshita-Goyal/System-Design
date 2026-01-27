@@ -16,6 +16,7 @@ class BasicCar implements Car{
     }
 }
 abstract class  Decorator implements Car{
+    //decorator has a car 
      protected Car car;
 
     public Decorator(Car car) {
