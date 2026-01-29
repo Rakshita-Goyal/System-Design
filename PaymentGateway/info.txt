@@ -1,0 +1,13 @@
+support multiple providores like paytm,gpay
+can add the gateways
+payment flow and validation 
+error handling ,retry mechanism
+validation,initiate ,confirm
+
+add recurring payment flows and subscription 
+linear retry and exponential backoff
+
+User → PaymentController → PaymentService → GatewayFactory → chosen PaymentGateway (Paytm/Razorpay) → BankingSystem
+
+payment request 
+gateway to talk to  BankingSystem
