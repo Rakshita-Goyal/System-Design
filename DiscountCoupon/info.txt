@@ -1,0 +1,10 @@
+add new coupon at runtime
+discount at cart and product level
+support multiple coupons types:seasonal offers,banking discounts,loyality discount
+support flat and percentage discount
+one coupon can/can not be applied on top of other
+thread safe 
+
+user go to application see products->add products to cart->discount coupons to apply
+price generated->final coupons applied and calculated 
+
