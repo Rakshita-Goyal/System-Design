@@ -1,0 +1,16 @@
+able to manage the inventory: dd /remove items
+have replenish(stock up) strategy
+like threashold,weekly and should be scalable
+have multiple inventory stores and extended
+user able to see items from dockstore closer to 5km
+if one darkstore unable to fulfill,split the order and fullfilled by multiple delivery agents 
+
+user to app ->see items->add to cart->order placed ->deviry partner delivers
+
+
+every darkstore has a inventory manager
+
+actual flow:
+user get the ordermanager ,get the user's cart and call the darkstore manager to get the near darkstores,get the cart items
+see if a darkstore can fulfill,or iterate to darkstores and get fullfilled
+assign the delivery partner
