@@ -1,0 +1,11 @@
+swipe left/right
+set your profile
+set the prefernces
+if match then chat in a chatroom 
+user can see profiles in the nearby location they set
+notified when a match
+user matching based on different factors (interest,location etc )
+
+happy flow:
+user comes to the profile ,get imagges of people,left right ,matching ,notification ,chat room
+ 
