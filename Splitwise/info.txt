@@ -1,0 +1,13 @@
+splitwise application:
+user can join /leave the group
+user can add expense in a group
+user can settle expense in a group
+adding expense on several strategies(equal,percent,specific)
+user cant leave if not settled expences
+notification on adding or settling 
+add indivisual expense out of group (one on one )
+
+flow:
+user to application->groups->groups has users->add expense and-> settle->notifications to group members ->indivisual transaction
+expense simplification (greedy)
+
