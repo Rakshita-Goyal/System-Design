@@ -1,0 +1,6 @@
+size of board should be scalable
+rules followd and new rules added also
+allow app notification for moves ,wins,draws
+
+play method start ,go in deque get the player (while game not over),player choose the cell to put its symbol
+checks validity of move (if empty),check win ,check draw ,player 2 enqueed behind ,same for player 2 now 
