@@ -1,0 +1,4 @@
+size of board
+standard rules,further extensible
+game setup strategy like random setup,custom and standard setup
+notification (console notifier)
