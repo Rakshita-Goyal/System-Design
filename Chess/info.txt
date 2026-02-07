@@ -1,0 +1,8 @@
+can have multiple users playing chess at same time 
+score based match making algo
+standard chess rules but scalable 
+user within match can talk also
+user can quit match in between 
+
+flow:
+user comes and get match ,queue for match making ,take to chess game 
